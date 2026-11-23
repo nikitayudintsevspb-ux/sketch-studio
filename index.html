@@ -3,40 +3,50 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<title>My Sketch Studio</title>
+<meta name="viewport" content="width=device-width, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>Sketch Studio</title>
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/chickenpaint@0.4.1/resources/css/chickenpaint.min.css">
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/chickenpaint@0.4.1/resources/css/chickenpaint.min.css">
 
 <style>
 html, body {
-  margin: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  -webkit-user-select: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    -webkit-user-select: none;
+    user-select: none;
+    touch-action: none;
 }
+
 #chickenpaint-parent {
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
 }
 </style>
 
 <script src="https://cdn.jsdelivr.net/npm/chickenpaint@0.4.1/js/ChickenPaint.min.js"></script>
+
 </head>
 <body>
+
 <div id="chickenpaint-parent"></div>
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-  new ChickenPaint({
-    uiElem: document.getElementById("chickenpaint-parent"),
-    allowDownload: true,
-    resourcesRoot: "https://cdn.jsdelivr.net/npm/chickenpaint@0.4.1/resources/",
-    disableBootstrapAPI: true,
-    fullScreenMode: "auto"
-  });
+    new ChickenPaint({
+        uiElem: document.getElementById("chickenpaint-parent"),
+        allowDownload: true,
+        resourcesRoot: "https://cdn.jsdelivr.net/npm/chickenpaint@0.4.1/resources/",
+        disableBootstrapAPI: true,
+        fullScreenMode: "auto"
+    });
 });
 </script>
+
 </body>
 </html>
+
